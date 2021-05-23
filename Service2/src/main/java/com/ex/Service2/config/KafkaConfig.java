@@ -88,6 +88,6 @@ public class KafkaConfig {
 		ReceiverOptions<String, Commentary> receiverOptions = ReceiverOptions.<String, Commentary>create(configProps)         
 			                   .subscription(Collections.singleton("topic"));
  
-		return new DefaultKafkaReceiver(consumerFactory(),	receiverOptions);
+		return new DefaultKafkaReceiver(null,	receiverOptions);
 	}
 }
